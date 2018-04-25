@@ -1,0 +1,7 @@
+<ng-container>
+  <div *ngFor="let tweet of tweets | tweetsSort:order">
+    <b>Name:</b> {{ tweet.user.name }}. {{ tweet.user.followers_count }} followers.<br>
+    <b>Tweet:</b> {{ tweet.text }}
+  </div>
+  <button (click)="order = !order">Sort me</button>
+</ng-container>
